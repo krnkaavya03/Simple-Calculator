@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    flex-direction: column; /* Allow for header and calculator */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(145deg, #c2e59c, #f38375);
+}
+
+h1 {
+    color: #1a1a1d; /* Heading color */
+    margin-bottom: 15px;
+}
+
+.calculator {
+    width: 360px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #3a3a3e, #2c2c30);
+    box-shadow: 15px 15px 30px #fb244b56, -15px -15px 30px #3af08657;
+}
+
+#display {
+    width: 95%;
+    height: 70px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #f38375, #c2e59c);
+    color: #1a1a1d;
+    box-shadow: inset 5px 5px 10px #1a1a1d, inset -5px -5px 10px #343437;
+    transition: 0.3s;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Styles for the first row and first column */
+button:nth-child(-n+4),
+button:nth-child(4n+1) {
+    background: linear-gradient(145deg, #f38365, #c2e59c); /* Light pink for first row and column */
+    color: #1a1a1d;
+}
+
+button {
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #3a3a3e, #2c2c30);
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 12px #1a1a1d, -6px -6px 12px #343437;
+}
+
+button:hover {
+    background: #01d36b;
+    color: #f8f8f8;
+    transform: scale(1.05);
+    box-shadow: 8px 8px 16px #1a1a1d, -8px -8px 16px #5a5a5f;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: inset 4px 4px 8px #1a1a1d, inset -4px -4px 8px #5a5a5f;
+}
+
+button#clear {
+    background: linear-gradient(145deg, #ff6b6b, #ff4f4f);
+    color: #fff;
+}
+
+button#clear:hover {
+    background: linear-gradient(145deg, #ff8585, #ff6b6b);
+    box-shadow: 8px 8px 16px #9e1e1e, -8px -8px 16px #ffb6b6;
+}
+
+button#equal {
+    background: linear-gradient(145deg, #4caf50, #388e3c);
+    color: #fff;
+    font-size: 24px;
+}
+
+button#equal:hover {
+    background: linear-gradient(145deg, #66bb6a, #43a047);
+    box-shadow: 8px 8px 16px #27632b, -8px -8px 16px #76c6a1;
+}
+
+button.number {
+    background: linear-gradient(145deg, #3a3a3e, #2c2c30);
+}
+
+button.operator {
+    background: linear-gradient(145deg, #ffeb3b, #ffd600);
+    color: #1a1a1d;
+    font-weight: bold;
+}
+
+button.operator:hover {
+    background: linear-gradient(145deg, #fff176, #ffeb3b);
+    color: #000;
+    box-shadow: 8px 8px 16px #c4a300, -8px -8px 16px #ffff8d;
+}
